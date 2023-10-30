@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <title>car showroom</title>
+   <link rel="stylesheet" type="text/css" href="9.css">
+</head>
+
+<body background="1.jpg">
+   <center><h1><I>ROY CAR SHOWROOM</h1></center>
+   <div class="container">
+      <div class="juice-types">
+         <div class="juice-card">
+            <center><h3>supra</h3></center>
+            <center><img src=supra.jpg width=150 height=90></center>
+            <center><button onclick="displayJuiceDetails('supra')">Add to Cart</button></center>
+         </div>
+         <div class="juice-card">
+            <h3>gtr</h3>
+            <center><img src=gtr.jpg width=150 height=90></center>
+            <button onclick="displayJuiceDetails('gtr')">Add to Cart</button>
+         </div>
+         <div class="juice-card">
+            <h3>ford</h3>
+            <center><img src=ford.jpg width=150 height=90></center>
+            <button onclick="displayJuiceDetails('ford')">Add to Cart</button>
+         </div>
+      </div>
+   </div>
+        <h1><p><center><B><I>
+   
+   <div id="juiceDetailsContainer" class="juice-details-container" style="display: none;">
+      <h3 id="juiceType"></h3>
+      <p>Rate with exchange: RS-9000/-</p>
+      <p>Rate without exchange: Rs-12000/-</p>
+      <button onclick="displayPurchase()">Purchase</button>
+   </div>
+
+    <div id="purchaseContainer" class="purchase-container" style="display: none;">
+      <h3>Purchase</h3>
+      <p>Customer Name: <input type="text" id="customerName"></p>
+      <p>Buying item: <span id="juiceTypePurchase"></span></p>
+      <p>With Exchange: <input type="checkbox" id="withExchange"></p>
+      <button onclick="displayPayment()">Make Payment</button>
+
+   </div>
+
+   <div id="paymentContainer" class="payment-container" style="display: none;">
+      <h3>Payment</h3>
+      <p>Buying item: <span id="juiceTypePayment"></span></p>
+      <p>Customer: <span id="customerDetails"></span></p>
+      <p>Price: <span id="price"></span></p>
+      <h4>Enter Card Details:</h4>
+      <input type="text" placeholder="Card Number">
+      <input type="text" placeholder="CVV">
+      <button onclick="returnHome()">Pay</button>
+   </div>
+
+   <div id="homeContainer" class="home-container" style="display: none;">
+      <p><h2>Thank you for your purchase!<h2></p> 
+   </div>
+
+   <script src="9.js"></script>
+</body>
+
+</html>
